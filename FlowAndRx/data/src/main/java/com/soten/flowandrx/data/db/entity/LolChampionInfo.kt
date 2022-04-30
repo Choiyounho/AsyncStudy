@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class LolChampionEntity(
+data class LolChampionInfo(
     @PrimaryKey
     val name: String,
     val image: Image
@@ -13,4 +13,5 @@ data class LolChampionEntity(
     data class Image(
         val full: String
     )
+
 }

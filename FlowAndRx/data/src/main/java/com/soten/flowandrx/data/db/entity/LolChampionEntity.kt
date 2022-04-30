@@ -1,4 +1,4 @@
-package com.soten.flowandrx.data.entity
+package com.soten.flowandrx.data.db.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -7,5 +7,10 @@ import androidx.room.PrimaryKey
 data class LolChampionEntity(
     @PrimaryKey
     val name: String,
-    val image: String
-)
+    val image: Image
+) {
+
+    data class Image(
+        val full: String
+    )
+}

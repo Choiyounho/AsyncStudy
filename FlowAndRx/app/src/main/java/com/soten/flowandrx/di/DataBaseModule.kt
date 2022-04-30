@@ -1,7 +1,7 @@
 package com.soten.flowandrx.di
 
 import android.content.Context
-import com.soten.flowandrx.data.AppDatabase.Companion.getInstance
+import com.soten.flowandrx.data.db.AppDatabase.Companion.getInstance
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

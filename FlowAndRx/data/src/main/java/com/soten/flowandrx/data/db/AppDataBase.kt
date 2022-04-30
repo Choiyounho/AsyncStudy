@@ -1,12 +1,15 @@
-package com.soten.flowandrx.data
+package com.soten.flowandrx.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.soten.flowandrx.data.entity.LolChampionEntity
+import androidx.room.TypeConverters
+import com.soten.flowandrx.data.db.converter.RoomConverter
+import com.soten.flowandrx.data.db.entity.LolChampionEntity
 
 @Database(entities = [LolChampionEntity::class], version = 1, exportSchema = false)
+@TypeConverters(RoomConverter::class)
 abstract class AppDatabase : RoomDatabase() {
 
     companion object {

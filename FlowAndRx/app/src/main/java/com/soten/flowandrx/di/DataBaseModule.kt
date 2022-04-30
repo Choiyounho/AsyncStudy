@@ -1,6 +1,7 @@
 package com.soten.flowandrx.di
 
 import android.content.Context
+import com.soten.flowandrx.data.db.AppDatabase
 import com.soten.flowandrx.data.db.AppDatabase.Companion.getInstance
 import dagger.Module
 import dagger.Provides
@@ -16,5 +17,8 @@ object DataBaseModule {
     @Provides
     @Singleton
     fun provideRoom(@ApplicationContext context: Context) = getInstance(context)
+
+    @Provides
+    fun provideLolDao(appDatabase: AppDatabase) = appDatabase.lolDao()
 
 }

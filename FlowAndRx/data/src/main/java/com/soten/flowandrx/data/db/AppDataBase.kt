@@ -6,11 +6,14 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.soten.flowandrx.data.db.converter.RoomConverter
+import com.soten.flowandrx.data.db.dao.LolDao
 import com.soten.flowandrx.data.db.entity.LolChampionEntity
 
 @Database(entities = [LolChampionEntity::class], version = 1, exportSchema = false)
 @TypeConverters(RoomConverter::class)
 abstract class AppDatabase : RoomDatabase() {
+
+    abstract fun lolDao(): LolDao
 
     companion object {
 
